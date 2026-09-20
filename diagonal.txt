@@ -1,0 +1,15 @@
+lass Solution {
+    public int diagonalSum(int[][] mat) {
+        int n=mat.length;
+    int pd=0;
+    int sd=0;
+    for(int i=0;i<n;i++){
+    pd=pd+mat[i][i];
+    sd=sd+mat[i][n-1-i];
+    }int sum=pd+sd;
+    if(n%2==1){
+    sum=sum-mat[n/2][n/2];    
+    }
+    return sum;
+    }
+}
